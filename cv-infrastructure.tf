@@ -1,13 +1,13 @@
 terraform {
   backend "gcs" {
-    bucket  = "private-bogdan-lytvynov-cv-infrastructure-tf-state"
-    prefix  = "terraform/state"
+    bucket = "private-bogdan-lytvynov-cv-infrastructure-tf-state"
+    prefix = "terraform/state"
   }
 }
 
 provider "google" {
-  project     = "swift-hangar-391602"
-  region      = "europe-central2"
+  project = "swift-hangar-391602"
+  region  = "europe-central2"
 }
 
 resource "google_compute_instance" "default" {
